@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>JavaScript, Funciones</title>
+		<script  type="application/javascript">
+
+
+			/* Función que devuelve un número al azar entre 1 y 100 */
+
+			function valorAleatorio()
+			{
+				return(Math.floor((Math.random() * 100) + 1));
+			}
+
+			/* Función que recibe como parámetro un número y devuelve true si es Par */ 
+
+			function par(numero)
+			{
+				return(numero % 2 == 0);
+			}
+
+			/* Función que recibe como parámetro un array y devuelve true si está vacío */ 
+
+			function arrayNull(miArray)
+			{
+				return(miArray == null);
+			}
+
+			/* declaración de las variables */
+
+			var numeroAzar;
+			var miArrayImpar;
+			var miArrayPar;
+			
+			/* declaración del bucle for */
+
+			for (var i = 1; i <= 50; i++) {
+				numeroAzar = valorAleatorio();
+				if (par(numeroAzar)) {
+					if (arrayNull(miArrayPar)){miArrayPar = [numeroAzar];}
+					else{miArrayPar.push([numeroAzar]);}			 
+				} else {if (arrayNull(miArrayImpar)){miArrayImpar = [numeroAzar];}
+					else{miArrayImpar.push([numeroAzar]);}
+				}
+			}
+
+
+		</script>		
+	</head>
+	<body>
+
+	</body>
+</html>
